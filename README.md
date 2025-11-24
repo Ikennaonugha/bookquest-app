@@ -2,8 +2,7 @@
 **A practical, user-friendly book search engine powered by the Google Books API**  
 **Assignment: External API Application with Load-Balanced Deployment**
 
-[![Demo Screenshot](https://via.placeholder.com/1200x600.png?text=BookQuest+Demo+Screenshot)](https://via.placeholder.com/1200x600.png?text=BookQuest+Demo+Screenshot)  
-*(Replace the link above with your real screenshot in the final repo)*
+link to video
 
 ## Overview & Purpose
 BookQuest is a modern web application that allows users to search the entire Google Books database with powerful filtering and sorting capabilities.  
@@ -72,7 +71,7 @@ nano .env
 ```
 Paste your real key:
 ```env
-GOOGLE_BOOKS_API_KEY=AIzaSyxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+GOOGLE_BOOKS_API_KEY=xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
 ### 4. Run the app
@@ -104,7 +103,7 @@ pip install --upgrade pip
 pip install -r requirements.txt gunicorn
 
 # 4. Add API key
-echo "GOOGLE_BOOKS_API_KEY=AIzaSyxxxxxxxxxxxxxxxxx" > .env
+echo "GOOGLE_BOOKS_API_KEY=xxxxxxxxxxxxxxxxxxxxxx" > .env
 
 # 5. Create systemd service
 sudo cp deployments/bookquest.service /etc/systemd/system/bookquest.service
@@ -168,3 +167,4 @@ License: Free tier (1000 requests/day) – perfect for this project
 - Clean, professional UI/UX
 - Secure key handling
 - Fully deployed with load balancing
+
