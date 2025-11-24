@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BookQuest</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        img { max-width: 100px; }
+    </style>
+</head>
+<body>
+    <h1>BookQuest: Discover Books</h1>
+    <form method="POST">
+        <input type="text" name="query" placeholder="Search books..." required>
+        <select name="language">
+            <option value="en">English</option>
+            <option value="fr">French</option>
+            <!-- Add more -->
+        </select>
+        <select name="print_type">
+            <option value="all">All</option>
+            <option value="books">Books</option>
+            <option value="magazines">Magazines</option>
+        </select>
+        <select name="order_by">
+            <option value="relevance">Relevance</option>
+            <option value="newest">Newest</option>
+        </select>
+        <button type="submit">Search</button>
+    </form>
+    {% if error %}
+        <p style="color: red;">{{ error }}</p>
+    {% endif %}
+    {% if results %}
+        <table>
+            <tr>
+                <th>Cover</th>
+                <th>Title</th>
+                <th>Author(s)</th>
+                <th>Rating</th>
+                <th>Description</th>
+                <th>Preview</th>
+            </tr>
+            {% for book in results %}
+                {% set info = book.volumeInfo %}
+                <tr>
+                    <td><img src="{{ info.imageLinks.thumbnail if info.imageLinks else '' }}" alt="Cover"></td>
+                    <td>{{ info.title }}</td>
+                    <td>{{ ', '.join(info.authors) if info.authors else 'Unknown' }}</td>
+                    <td>{{ info.averageRating | default('N/A') }} ⭐</td>
+                    <td>{{ info.description[:200] + '...' if info.description else 'No description' }}</td>
+                    <td><a href="{{ info.previewLink }}" target="_blank">Preview</a></td>
+                </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</body>
+</html>

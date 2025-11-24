@@ -1,0 +1,14 @@
+[Unit]
+Description=BookQuest - Book Discovery App
+After=network.target
+
+[Service]
+User=www-data
+Group=www-data
+WorkingDirectory=/var/www/bookquest-app
+Environment="PATH=/var/www/bookquest-app/venv/bin"
+EnvironmentFile=/var/www/bookquest-app/.env
+ExecStart=/var/www/bookquest-app/venv/bin/gunicorn --workers 3 --bind unix:/var/www/bookquest-app/bookquest.sock app:app
+
+[Install]
+WantedBy=multi-user.target
