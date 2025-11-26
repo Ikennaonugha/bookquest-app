@@ -1,0 +1,210 @@
+# Book Finder Application - Git Ignore File
+# This file prevents sensitive and unnecessary files from being committed to GitHub
+
+# ============================================================================
+# CRITICAL: API KEYS AND SENSITIVE DATA - NEVER COMMIT THESE!
+# ============================================================================
+config.js
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# ============================================================================
+# IDE and Editor Files
+# ============================================================================
+# Visual Studio Code
+.vscode/
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+
+# IntelliJ IDEA / WebStorm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+.*.sw?
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================================================
+# Operating System Files
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+.directory
+.Trash-*
+.nfs*
+
+# ============================================================================
+# Node.js (if you add build tools later)
+# ============================================================================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.pnpm-debug.log*
+
+# ============================================================================
+# Build and Distribution
+# ============================================================================
+dist/
+build/
+out/
+*.min.js
+*.min.css
+*.bundle.js
+*.bundle.css
+
+# ============================================================================
+# Logs
+# ============================================================================
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# ============================================================================
+# Temporary Files
+# ============================================================================
+*.tmp
+*.temp
+*.bak
+*.backup
+.cache/
+.temp/
+temp/
+tmp/
+
+# ============================================================================
+# Deployment and Server Files
+# ============================================================================
+# SSH Keys and Certificates
+*.pem
+*.key
+*.crt
+*.cer
+*.p12
+*.pfx
+id_rsa
+id_rsa.pub
+known_hosts
+
+# Deployment scripts with sensitive data
+deploy-production.sh
+deploy-sensitive.sh
+
+# Server configuration backups
+*.conf.bak
+
+# ============================================================================
+# Testing and Coverage
+# ============================================================================
+coverage/
+.nyc_output/
+*.coverage
+htmlcov/
+.pytest_cache/
+.coverage
+.coverage.*
+
+# ============================================================================
+# Python (if you use Python for deployment)
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+env/
+*.egg-info/
+
+# ============================================================================
+# Backup Files
+# ============================================================================
+*~
+*.orig
+*.bak
+*.backup
+*.old
+*.save
+
+# ============================================================================
+# Archives
+# ============================================================================
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# ============================================================================
+# Database Files (if you add database later)
+# ============================================================================
+*.sqlite
+*.sqlite3
+*.db
+
+# ============================================================================
+# Docker (if you containerize later)
+# ============================================================================
+docker-compose.override.yml
+.dockerignore
+
+# ============================================================================
+# KEEP THESE FILES (exceptions to above rules)
+# ============================================================================
+# These are safe templates that should be committed
+!.env.example
+!config.example.js
+!.gitignore
+!README.md
