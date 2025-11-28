@@ -3,7 +3,7 @@
 A web-based book search application that uses the Google Books API to search and display millions of books with advanced filtering and sorting capabilities.
 ![Bookquest Application](https://img.shields.io/badge/API-Google%20Books-blue) ![License](https://img.shields.io/badge/license-MIT-green)
 
-Link to video:
+Link to video: https://youtu.be/w8xuugNG9PY
 ## Features
 
 - 🔍 **Real-time Search**: Search books by title, author, ISBN, or keywords
@@ -549,3 +549,4 @@ This project is created for educational purposes as part of a web development as
 Ikenna Onugha 
 i.onugha@alustudent.com
 Ikennaonugha
+
